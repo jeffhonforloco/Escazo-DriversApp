@@ -1,0 +1,15 @@
+export const DOCUMENT_STATUS = {
+    PENDING: 'pending',
+    APPROVED: 'approved',
+    REJECTED: 'rejected'
+} as const;
+
+export const TRIP_STATUS = {
+    PENDING: 'pending',
+    ACCEPTED: 'accepted',
+    COMPLETED: 'completed',
+    CANCELLED: 'cancelled'
+} as const;
+
+export type DocumentStatus = typeof DOCUMENT_STATUS[keyof typeof DOCUMENT_STATUS];
+export type TripStatus = typeof TRIP_STATUS[keyof typeof TRIP_STATUS];
